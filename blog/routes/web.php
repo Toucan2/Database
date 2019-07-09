@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function (App\Accommodation $table) {
-    return view(table.show);
+Route::get('/', function () {
+    return view('welcome');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
